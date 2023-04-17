@@ -25,19 +25,30 @@ export default function Home() {
       <main
         style={{
           display: "flex",
-          width: "100%",
           minHeight: "100vh",
           justifyContent: "center",
           alignItems: "center",
+          backgroundImage: "url(/images/blackspace_back.webp)",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+
         }}
       >
-        <Image
+        {/* <Image
           alt="travel"
           src="/images/blackspace_back.webp"
-          fill={true}
+          width="0"
+          height="0"
+          sizes="100vw"
           quality={100}
-          style={{ zIndex: -11, objectFit: "cover" }}
-        />
+          layout={"responsive"}
+          style={{
+            zIndex: -1,
+            objectFit: "cover",
+            width: "100%",
+            height: "auto",
+          }}
+        /> */}
         <section
           style={{
             display: "flex",
@@ -59,7 +70,7 @@ export default function Home() {
           <div
             style={{
               maxWidth: 760,
-              margin: "40px 0",
+              margin: "40px 0 0 0",
               display: "flex",
               flexDirection: "column",
             }}
@@ -100,7 +111,7 @@ export default function Home() {
             >
               <button
                 style={{
-                  margin: "40px 80px",
+                  margin: "40px 80px 0 80px",
                   padding: "20px 60px",
                   borderRadius: "25px",
                   backgroundColor: "whitesmoke",
