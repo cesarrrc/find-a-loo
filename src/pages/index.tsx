@@ -43,7 +43,7 @@ export default function Home(props: Props) {
             border: "1px black solid",
             borderRadius: 25,
             // maxHeight:'600px',
-            overflow: "auto",
+            // overflow: "auto",
           }}
         >
           <div
@@ -169,7 +169,7 @@ export default function Home(props: Props) {
           padding: 50,
           border: "1px black solid",
           // maxHeight:'600px',
-          overflow: "auto",
+          // overflow: "auto",
         }}
       >
         <div

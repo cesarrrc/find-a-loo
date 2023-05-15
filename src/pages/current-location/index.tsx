@@ -135,7 +135,7 @@ export default function Home({ allLocations }) {
             alignItems: "center",
             padding: 30,
             height: "100%",
-            minHeight: "400px",
+            minHeight: "300px",
           }}
         >
           <div

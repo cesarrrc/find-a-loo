@@ -64,8 +64,8 @@ const LocationCard = ({
           style={{
             minWidth: 160,
             position: "relative",
-            overflow: "hidden",
-            overflowX: "hidden",
+            // overflow: "hidden",
+            // overflowX: "hidden",
           }}
         >
           <Image
