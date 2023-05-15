@@ -60,7 +60,9 @@ const LocationCard = ({
           textAlign: "center",
         }}
       >
-        <div style={{ minWidth: 160, position: "relative" }}>
+        <div
+          style={{ minWidth: 160, position: "relative", overflow: "hidden" }}
+        >
           <Image
             alt={name}
             src={image.asset.url}
@@ -116,9 +118,9 @@ const LocationCard = ({
           {/* <p style={{ fontFamily: "Mulish, sans-serif", fontSize: 10 }}>
             {description}
           </p> */}
-              <h4 style={{ fontFamily: "Cinzel, sans-serif", fontSize: 12 }}>
-                <Link href={`tel:${phone_number}`}>{phone_number}</Link>
-              </h4>
+          <h4 style={{ fontFamily: "Cinzel, sans-serif", fontSize: 12 }}>
+            <Link href={`tel:${phone_number}`}>{phone_number}</Link>
+          </h4>
           <ul
             style={{
               listStyle: "none",
@@ -146,6 +148,8 @@ const LocationCard = ({
         </div>
       </div>
     );
+
+    
   return (
     <div
       style={{
@@ -159,7 +163,7 @@ const LocationCard = ({
         textAlign: "center",
       }}
     >
-      <div style={{ minWidth: 240, position: "relative" }}>
+      <div style={{ minWidth: 240, position: "relative", overflow: "hidden" }}>
         <Image
           alt={name}
           src={image.asset.url}

@@ -65,7 +65,8 @@ export default function Home({ allLocations }) {
                 width: "100%",
                 maxWidth: 600,
                 borderRadius: 25,
-                padding: '4px 8px',
+                padding: "4px 8px 10px 8px",
+                // marginBottom: 20,
                 overflowY: "auto",
                 height: "0",
               }}
@@ -140,6 +141,7 @@ export default function Home({ allLocations }) {
           <div
             style={{
               backgroundColor: "#6A77FD",
+              paddingBottom: 20,
               display: "flex",
               flex: "1 1 auto",
               flexDirection: "column",
@@ -147,7 +149,7 @@ export default function Home({ allLocations }) {
               width: "100%",
               maxWidth: 600,
               borderRadius: 25,
-              padding: "0 20px",
+              padding: "10px 20px 30px 20px",
               overflowY: "auto",
               height: "0",
             }}
