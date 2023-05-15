@@ -61,7 +61,12 @@ const LocationCard = ({
         }}
       >
         <div
-          style={{ minWidth: 160, position: "relative", overflow: "hidden" }}
+          style={{
+            minWidth: 160,
+            position: "relative",
+            overflow: "hidden",
+            overflowX: "hidden",
+          }}
         >
           <Image
             alt={name}
@@ -149,7 +154,6 @@ const LocationCard = ({
       </div>
     );
 
-    
   return (
     <div
       style={{

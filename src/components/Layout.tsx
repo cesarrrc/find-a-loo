@@ -36,7 +36,7 @@ const Layout = ({ children, navbar }: Props) => {
       >
         <Image
           src="/images/rolls.jpg"
-          alt="Picture of the author"
+          alt="toilet paper"
           fill
           style={{ objectFit: "cover" }}
           quality={100}
