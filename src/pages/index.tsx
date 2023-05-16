@@ -40,7 +40,6 @@ export default function Home(props: Props) {
             maxWidth: 760,
             width: "100%",
             padding: 16,
-            border: "1px black solid",
             borderRadius: 25,
             // maxHeight:'600px',
             // overflow: "auto",
@@ -108,9 +107,10 @@ export default function Home(props: Props) {
                 style={{
                   alignSelf: "center",
                   fontSize: 12,
+                  fontFamily: "Mulish, sans-serif",
                 }}
               >
-                ABOUT
+                About
               </Link>
               <Link
                 href={"/current-location"}
@@ -120,12 +120,12 @@ export default function Home(props: Props) {
               >
                 <button
                   style={{
-                    padding: "14px 14px",
+                    padding: "8px 10px",
                     borderRadius: "50px",
                     backgroundColor: "whitesmoke",
                     color: "#c9af60",
                     fontFamily: "Mulish, sans-serif",
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: "bolder",
                     cursor: "pointer",
                   }}
@@ -138,9 +138,10 @@ export default function Home(props: Props) {
                 style={{
                   alignSelf: "center",
                   fontSize: 12,
+                  fontFamily: "Mulish, sans-serif",
                 }}
               >
-                CONTACT
+                Contact
               </Link>
             </nav>
           </div>
@@ -167,9 +168,6 @@ export default function Home(props: Props) {
           maxWidth: 760,
           width: "100%",
           padding: 50,
-          border: "1px black solid",
-          // maxHeight:'600px',
-          // overflow: "auto",
         }}
       >
         <div
@@ -232,9 +230,10 @@ export default function Home(props: Props) {
               href={"/about"}
               style={{
                 alignSelf: "center",
+                fontFamily: "Mulish, sans-serif",
               }}
             >
-              ABOUT
+              About
             </Link>
             <Link
               href={"/current-location"}
@@ -261,9 +260,10 @@ export default function Home(props: Props) {
               href={"/contact"}
               style={{
                 alignSelf: "center",
+                fontFamily: "Mulish, sans-serif",
               }}
             >
-              CONTACT
+              Contact
             </Link>
           </nav>
         </div>

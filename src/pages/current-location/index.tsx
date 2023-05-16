@@ -70,6 +70,7 @@ export default function Home({ allLocations }) {
                 overflow: "hidden",
                 overflowY: "scroll",
                 height: "0",
+                // scrollbarGutter: "auto",
               }}
             >
               <h3
@@ -141,45 +142,57 @@ export default function Home({ allLocations }) {
         >
           <div
             style={{
-              backgroundColor: "#6A77FD",
-              paddingBottom: 20,
+              // scrollbarColor: "red",
+              // scrollbarWidth: "thin",
               display: "flex",
               flex: "1 1 auto",
-              flexDirection: "column",
-              alignItems: "center",
               width: "100%",
               maxWidth: 600,
-              borderRadius: 25,
-              padding: "10px 20px 30px 20px",
-              position: "relative",
-              overflow: "hidden",
-              overflowY: "scroll",
               height: "0",
+              overflow: "hidden",
+              borderRadius: 25,
             }}
           >
-            <h3
-              style={{
-                fontFamily: "Cinzel, sans-serif",
-                fontSize: 34,
-                fontWeight: "lighter",
-                margin: 30,
-                display: "flex",
-              }}
-            >
-              Free Loo Near You
-            </h3>
             <div
+              className="scroll"
               style={{
+                backgroundColor: "#6A77FD",
+                paddingBottom: 20,
                 display: "flex",
                 flexDirection: "column",
-                flex: 1,
-                gap: 10,
+                alignItems: "center",
+                position: "relative",
+                height: "100%",
+                padding: "10px 20px 30px 20px",
                 width: "100%",
+                overflow: "hidden",
+                overflowY: "scroll",
               }}
             >
-              {allLocations.map((location) => (
-                <LocationCard location={location} />
-              ))}
+              <h3
+                style={{
+                  fontFamily: "Cinzel, sans-serif",
+                  fontSize: 34,
+                  fontWeight: "lighter",
+                  margin: 30,
+                  display: "flex",
+                }}
+              >
+                Free Loo Near You
+              </h3>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  flex: 1,
+                  gap: 10,
+                  width: "100%",
+                }}
+              >
+                {allLocations.map((location) => (
+                  <LocationCard location={location} />
+                ))}
+              </div>
             </div>
           </div>
         </div>

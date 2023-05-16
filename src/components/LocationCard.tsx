@@ -58,7 +58,7 @@ const LocationCard = ({
           borderRadius: 25,
           overflow: "hidden",
           textAlign: "center",
-          position:'relative'
+          position: "relative",
         }}
       >
         <div
