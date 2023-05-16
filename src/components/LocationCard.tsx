@@ -44,7 +44,6 @@ const LocationCard = ({
   },
 }: Props) => {
   const winDim = useWindowDimensions();
-  console.log(winDim);
 
   if (winDim.width < 600)
     return (
@@ -74,6 +73,7 @@ const LocationCard = ({
             fill
             style={{ objectFit: "cover" }}
             quality={100}
+            sizes="100%"
           />
           <div
             style={{
@@ -95,6 +95,7 @@ const LocationCard = ({
           style={{
             display: "flex",
             flexDirection: "column",
+            justifyContent: "space-between",
             alignItems: "center",
             width: "100%",
             padding: 4,
@@ -106,12 +107,18 @@ const LocationCard = ({
             style={{
               margin: 2,
               fontFamily: "Cinzel, sans-serif",
-              fontSize: 12,
+              fontSize: 14,
             }}
           >
             {name}
           </h3>
-          <h5 style={{ fontFamily: "Cinzel, sans-serif", fontSize: 12 }}>
+          <h5
+            style={{
+              lineHeight: 0.9,
+              fontFamily: "Cinzel, sans-serif",
+              fontSize: 12,
+            }}
+          >
             <Link
               href={`https://www.google.com/maps/search/${name}+${address.city_state_zip}+${address.street_address}`}
             >
@@ -131,7 +138,7 @@ const LocationCard = ({
               listStyle: "none",
               width: "100%",
               textAlign: "center",
-              margin: 4,
+              margin: 0,
               fontFamily: "Bodoni Moda, serif",
               fontWeight: "bold",
               fontSize: 10,
@@ -139,11 +146,24 @@ const LocationCard = ({
           >
             Hours:
             {hours.length == 1 ? (
-              <li>Everyday:&nbsp; {hours[0].hours}</li>
+              <li
+                style={{
+                  margin: 0,
+                  lineHeight: 0.9,
+                }}
+              >
+                Everyday:&nbsp; {hours[0].hours}
+              </li>
             ) : (
               <>
-                {hours.map((hour) => (
-                  <li>
+                {hours.map((hour, i) => (
+                  <li
+                    key={i}
+                    style={{
+                      margin: 0,
+                      lineHeight: 1.2,
+                    }}
+                  >
                     {hour.days} &nbsp; &nbsp; {hour.hours}
                   </li>
                 ))}
@@ -174,6 +194,7 @@ const LocationCard = ({
           fill
           style={{ objectFit: "cover" }}
           quality={100}
+          sizes="100%"
         />
         <div
           style={{
@@ -234,8 +255,8 @@ const LocationCard = ({
             <li>Everyday:&nbsp; {hours[0].hours}</li>
           ) : (
             <>
-              {hours.map((hour) => (
-                <li>
+              {hours.map((hour, i) => (
+                <li key={i}>
                   {hour.days} &nbsp; &nbsp; {hour.hours}
                 </li>
               ))}

@@ -19,17 +19,26 @@ const Navbar = (props: Props) => {
           justifyContent: "space-between",
         }}
       >
-        <div style={{ width:180, position: "relative", marginLeft: 14 }}>
-          <Link href="/">
+        <Link href="/">
+          <div
+            style={{
+              width: 200,
+              position: "relative",
+              marginLeft: 14,
+              height: "100%",
+            }}
+          >
             <Image
               src="/images/logo.png"
               alt="Picture of the author"
               fill
+              sizes="100%"
               style={{ objectFit: "contain" }}
               quality={100}
+              
             />
-          </Link>
-        </div>
+          </div>
+        </Link>
         <div style={{ height: "100%" }}>
           <nav
             style={{
@@ -57,17 +66,25 @@ const Navbar = (props: Props) => {
         justifyContent: "space-between",
       }}
     >
-      <div style={{ width: 400, position: "relative", marginLeft: 40 }}>
-        <Link href="/">
+      <Link href="/">
+        <div
+          style={{
+            width: 400,
+            position: "relative",
+            marginLeft: 40,
+            height: "100%",
+          }}
+        >
           <Image
             src="/images/logo.png"
             alt="Picture of the author"
             fill
+            sizes="100%"
             style={{ objectFit: "contain" }}
             quality={100}
           />
-        </Link>
-      </div>
+        </div>
+      </Link>
       <div style={{ height: "100%" }}>
         <nav
           style={{

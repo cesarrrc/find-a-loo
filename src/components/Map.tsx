@@ -83,7 +83,6 @@ const Map = ({
     if (mapInstance) {
       const watchId = navigator.geolocation.watchPosition(
         (position) => {
-          console.log(position);
           setCurrentLocation({
             lat: position.coords.latitude,
             lng: position.coords.longitude,
@@ -128,6 +127,10 @@ const Map = ({
   );
 
   useEffect(() => {
+    console.log(marker_locations, markers, "markers");
+  }, [marker_locations]);
+
+  useEffect(() => {
     if (!hoveringLocation) {
       return;
     }
@@ -151,7 +154,6 @@ const Map = ({
       }, 600);
     };
   }, [hoveredLocation, hoveringLocation, markers]);
-  console.log(currentLocation);
 
   return (
     <>
@@ -166,6 +168,25 @@ const Map = ({
           mapContainerStyle={{ width: "100%", height: "100%" }}
         >
           <Marker position={currentLocation} />
+          {mapInstance &&
+            markers?.map((marker, i) => (
+              <Marker
+                key={i}
+                position={marker}
+                title="EZ-Eats"
+                icon={{
+                  url: "/images/toilet.jpeg",
+                  scaledSize: new google.maps.Size(45, 45),
+                }}
+                animation={window.google.maps.Animation.DROP}
+                onClick={() => {
+                  window.open(
+                    `https://www.google.com/maps/search/ez+eats+${marker_locations[i]}`,
+                    "_blank"
+                  );
+                }}
+              />
+            ))}
         </GoogleMap>
       )}
     </>

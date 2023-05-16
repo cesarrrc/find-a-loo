@@ -12,7 +12,6 @@ import "@/styles/globals.css";
 export default function App(props: any) {
   const [navbar, setNavbar] = useState(true);
   const [locations, setLocations] = useState({});
-  console.log(props, "********");
   return (
     <Layout navbar={navbar}>
       <props.Component
@@ -30,7 +29,6 @@ export const getInitialProps: any = async ({ params }) => {
   const results = await client.query({
     query: GET_LOCATIONS,
   });
-  console.log(results, "resultssss");
   if (!results) {
     return { notFound: true };
   }
