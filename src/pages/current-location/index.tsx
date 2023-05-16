@@ -66,9 +66,9 @@ export default function Home({ allLocations }) {
                 maxWidth: 600,
                 borderRadius: 25,
                 padding: "4px 8px 10px 8px",
-                overflowY: "scroll",
                 position: "relative",
                 overflow: "hidden",
+                overflowY: "scroll",
                 height: "0",
               }}
             >
@@ -151,10 +151,10 @@ export default function Home({ allLocations }) {
               maxWidth: 600,
               borderRadius: 25,
               padding: "10px 20px 30px 20px",
-              overflowY: "scroll",
-              height: "0",
               position: "relative",
               overflow: "hidden",
+              overflowY: "scroll",
+              height: "0",
             }}
           >
             <h3
