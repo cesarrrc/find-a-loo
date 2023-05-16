@@ -56,7 +56,9 @@ const LocationCard = ({
           display: "flex",
           minHeight: 100,
           borderRadius: 25,
-          overflow: "hidden",
+          overflow: "hidden !important",
+          overflowY: "hidden",
+          overflowX: "hidden",
           textAlign: "center",
         }}
       >

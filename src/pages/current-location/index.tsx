@@ -52,7 +52,7 @@ export default function Home({ allLocations }) {
               alignItems: "center",
               padding: 14,
               height: "100%",
-              minHeight: "400px",
+              minHeight: "200px",
             }}
           >
             <div
@@ -66,8 +66,7 @@ export default function Home({ allLocations }) {
                 maxWidth: 600,
                 borderRadius: 25,
                 padding: "4px 8px 10px 8px",
-                // marginBottom: 20,
-                overflowY: "auto",
+                overflowY: "scroll",
                 height: "0",
               }}
             >
@@ -150,7 +149,7 @@ export default function Home({ allLocations }) {
               maxWidth: 600,
               borderRadius: 25,
               padding: "10px 20px 30px 20px",
-              overflowY: "auto",
+              overflowY: "scroll",
               height: "0",
             }}
           >
