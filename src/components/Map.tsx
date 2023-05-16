@@ -77,6 +77,7 @@ const Map = ({
   };
 
   useEffect(() => {
+    console.log('map instance')
     if (marker_locations && mapInstance) {
       getGeos(marker_locations);
     }
@@ -84,18 +85,18 @@ const Map = ({
       const watchId = navigator.geolocation.watchPosition(
         (position) => {
           if (
-            position.coords.latitude === currentLocation.lat &&
-            position.coords.longitude === currentLocation.lng
+            position.coords.latitude == currentLocation.lat &&
+            position.coords.longitude == currentLocation.lng
           )
             return;
           setCurrentLocation({
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           });
-          mapRef.current?.panTo({
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          });
+          // mapRef.current?.panTo({
+          //   lat: position.coords.latitude,
+          //   lng: position.coords.longitude,
+          // });
           mapRef.current?.setZoom(16);
         },
         (e) => console.log(e)
@@ -165,7 +166,7 @@ const Map = ({
       {isLoaded && (
         <GoogleMap
           zoom={9}
-          center={center}
+          center={currentLocation}
           // mapContainerClassName={""}
           // options={options}
           onLoad={onLoad}
