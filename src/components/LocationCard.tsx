@@ -52,13 +52,11 @@ const LocationCard = ({
         style={{
           backgroundColor: "whitesmoke",
           color: "black",
-          width: "100%",
+          maxWidth: "100%",
           display: "flex",
           minHeight: 100,
           borderRadius: 25,
-          overflow: "hidden !important",
-          overflowY: "hidden",
-          overflowX: "hidden",
+          overflow: "hidden",
           textAlign: "center",
         }}
       >
@@ -66,8 +64,7 @@ const LocationCard = ({
           style={{
             minWidth: 160,
             position: "relative",
-            // overflow: "hidden",
-            // overflowX: "hidden",
+            overflow: "hidden",
           }}
         >
           <Image
