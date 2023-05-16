@@ -83,6 +83,11 @@ const Map = ({
     if (mapInstance) {
       const watchId = navigator.geolocation.watchPosition(
         (position) => {
+          if (
+            position.coords.latitude === currentLocation.lat &&
+            position.coords.longitude === currentLocation.lng
+          )
+            return;
           setCurrentLocation({
             lat: position.coords.latitude,
             lng: position.coords.longitude,
@@ -181,7 +186,7 @@ const Map = ({
                 animation={window.google.maps.Animation.DROP}
                 onClick={() => {
                   window.open(
-                    `https://www.google.com/maps/search/ez+eats+${marker_locations[i]}`,
+                    `https://www.google.com/maps/search/${marker_locations[i]}`,
                     "_blank"
                   );
                 }}
