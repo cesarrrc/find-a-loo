@@ -88,10 +88,10 @@ const Map = ({
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           });
-          // mapRef.current?.panTo({
-          //   lat: position.coords.latitude,
-          //   lng: position.coords.longitude,
-          // });
+          mapRef.current?.panTo({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          });
           mapRef.current?.setZoom(16);
         },
         (e) => console.log(e)
@@ -160,8 +160,8 @@ const Map = ({
     <>
       {isLoaded && (
         <GoogleMap
-          zoom={14}
-          center={currentLocation}
+          // zoom={14}
+          // center={currentLocation}
           // mapContainerClassName={""}
           // options={options}
           onLoad={onLoad}
